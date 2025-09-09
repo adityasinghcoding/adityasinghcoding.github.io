@@ -1,65 +1,57 @@
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+/*===== MENU SHOW =====*/ 
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
 
-function setTheme(theme) {
-  if (theme === 'dark') {
-    body.classList.add('dark');
-    themeToggle.textContent = '☀️';
-  } else {
-    body.classList.remove('dark');
-    themeToggle.textContent = '🌙';
-  }
-  localStorage.setItem('theme', theme);
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
 }
+showMenu('nav-toggle','nav-menu')
 
-themeToggle.addEventListener('click', () => {
-  const isDark = body.classList.toggle('dark');
-  setTheme(isDark ? 'dark' : 'light');
-});
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
 
-// On page load, set theme from localStorage or system preference
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    setTheme('dark');
-  }
-  // Animation triggers
-  document.querySelectorAll('.animate-in, .animate-in-delay').forEach(el => {
-    el.style.opacity = '1';
-    el.style.transform = 'none';
-  });
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-  // Load GitHub projects dynamically
-  loadProjects();
-});
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
-function loadProjects() {
-  const projectGrid = document.getElementById('projectGrid');
-  fetch('https://api.github.com/users/adityasinghcoding/repos?sort=updated&per_page=6')
-    .then(response => response.json())
-    .then(repos => {
-      projectGrid.innerHTML = '';
-      repos
-        .filter(repo => !repo.fork && !repo.archived && repo.description)
-        .slice(0, 6)
-        .forEach((repo, idx) => {
-          const card = document.createElement('div');
-          card.className = 'project-card animate-in' + (idx % 2 === 0 ? '' : ' animate-in-delay');
-          card.innerHTML = `
-            <h3>${repo.name.replace(/[-_]/g, ' ')}</h3>
-            <p>${repo.description}</p>
-            <a href="${repo.html_url}" target="_blank">View on GitHub →</a>
-          `;
-          projectGrid.appendChild(card);
-        });
-      if (projectGrid.innerHTML.trim() === '') {
-        projectGrid.innerHTML = '<p style="color:#888;">No public projects found. Add some on GitHub!</p>';
-      }
+const scrollActive = () =>{
+    const scrollDown = window.scrollY
+
+  sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+              sectionTop = current.offsetTop - 58,
+              sectionId = current.getAttribute('id'),
+              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+        
+        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+        }else{
+            sectionsClass.classList.remove('active-link')
+        }                                                    
     })
-    .catch(() => {
-      projectGrid.innerHTML = '<p style="color:#888;">Could not load projects. Try again later.</p>';
-    });
 }
+window.addEventListener('scroll', scrollActive)
+
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 200,
+//     reset: true
+});
+
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
+sr.reveal('.home__social-icon',{ interval: 200}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
