@@ -1,15 +1,34 @@
-// Dark mode toggle
-const toggle = document.getElementById('darkModeToggle');
-toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    // Save preference
-    if(document.body.classList.contains('light')){
-        localStorage.setItem('theme', 'light');
-    } else {
-        localStorage.setItem('theme', 'dark');
-    }
-});
-// Load saved theme
-if(localStorage.getItem('theme') === 'light'){
-    document.body.classList.add('light');
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    body.classList.remove('dark');
+    themeToggle.textContent = '🌙';
+  }
+  localStorage.setItem('theme', theme);
 }
+
+themeToggle.addEventListener('click', () => {
+  const isDark = body.classList.toggle('dark');
+  setTheme(isDark ? 'dark' : 'light');
+});
+
+// On page load, set theme from localStorage or system preference
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  }
+  // Animation triggers
+  document.querySelectorAll('.animate-in, .animate-in-delay, .animate-in-delay-2').forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+});
