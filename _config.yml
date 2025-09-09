@@ -1,3 +1,0 @@
-theme: minimal       # Use any supported theme like minimal, cayman, slate, etc.
-plugins:
-  - jekyll-default-layout  # Include this if you want to use that plugin
