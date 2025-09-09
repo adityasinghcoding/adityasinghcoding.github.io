@@ -1,530 +1,624 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-  <!--- basic page needs
+  <head>
+    <!--- basic page needs
     ================================================== -->
-  <meta charset="utf-8">
-  <title>Aditya Portfolio</title>
-  <meta name="description" content="">
-  <meta name="author" content=""><!-- mobile specific metas
+    <meta charset="utf-8" />
+    <title>Aditya Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- mobile specific metas
     ================================================== -->
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1"><!-- CSS
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS
     ================================================== -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css"><!-- script
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <!-- script
     ================================================== -->
 
-  <script src="js/modernizr.js"></script>
-  <script src="js/pace.min.js"></script><!-- favicons
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <!-- favicons
     ================================================== -->
-  <link rel="apple-touch-icon" sizes="180x180" href=
-  "images/Logo.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href=
-  "images/Logo.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href=
-  "images/Logo.jpg">
-  <link rel="manifest" href="site.webmanifest">
-  <!-- Google tag (gtag.js) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Logo.jpg" />
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- Google tag (gtag.js) -->
 
-  <script async src=
-  "https://www.googletagmanager.com/gtag/js?id=G-66C5N9E8ZJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-66C5N9E8ZJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-66C5N9E8ZJ');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "gkbr3h6vh4");
-  </script>
-</head>
-<body id="top">
-  <div id="preloader">
-    <div id="loader"></div>
-  </div><!-- site header
-    ================================================== -->
-  <header class="s-header">
-    <div class="header-logo">
-      <a class="site-logo" href="index.html"><img src=
-      "images/Logo.png" alt="Homepage" style="height: 20px;"></a>
+      gtag("config", "G-66C5N9E8ZJ");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "gkbr3h6vh4");
+    </script>
+  </head>
+  <body id="top">
+    <div id="preloader">
+      <div id="loader"></div>
     </div>
-    <nav class="header-nav-wrap">
-      <ul class="header-main-nav">
-        <li class="current">
-          <a class="smoothscroll" href="#intro" title=
-          "intro">Intro</a>
-        </li>
-        <li>
-          <a class="smoothscroll" href="#about" title=
-          "About">About</a>
-        </li>
-        <li>
-          <a class="smoothscroll" href="#services" title=
-          "Skills">Skills</a>
-        </li>
-        <li>
-          <a class="smoothscroll" href="#work" title=
-          "work">Work</a>
-        </li>
-        <li>
-          <a class="smoothscroll" href="#contact" title=
-          "contact us">Say Hello</a>
-        </li>
-      </ul>
-      <ul class="header-social">
-        <li>
-          <a href=
-          "https://linkedin.com/in/aakshita-singh-44794b227/"></a>
-        </li>
-        <li>
-          <a href="https://github.com/aakshitaa"></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/aakshita_singh"></a>
-        </li>
-        <!-- <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li> -->
-      </ul>
-    </nav><a class="header-menu-toggle" href=
-    "#"><span>Menu</span></a>
-  </header><!-- end s-header -->
-  <!-- intro
+    <!-- site header
     ================================================== -->
-  <section id="intro" class="s-intro target-section">
-    <div class="row intro-content">
-      <div class="column large-8 mob-full intro-text">
-        <h3>Hello, I'm Aditya</h3>
-        <h1>Computer Science Graduate.<br>
-        Eager to get real<br>
-        world experience<br></h1>
+    <header class="s-header">
+      <div class="header-container">
+        <div class="header-content">
+          <div class="header-logo">
+            <a class="site-logo" href="index.html"
+              ><img src="images/Logo.png" alt="Homepage" style="height: 20px"
+            /></a>
+          </div>
+          <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+              <li class="current">
+                <a class="smoothscroll" href="#intro" title="intro">Intro</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#about" title="About">About</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#services" title="Skills"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a class="smoothscroll" href="#work" title="work">Work</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#contact" title="contact us"
+                  >Say Hello</a
+                >
+              </li>
+            </ul>
+            <ul class="header-social">
+              <li>
+                <a href="https://linkedin.com/in/aakshita-singh-44794b227/"></a>
+              </li>
+              <li>
+                <a href="https://github.com/aakshitaa"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aakshita_singh"></a>
+              </li>
+              <!-- <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li> -->
+            </ul>
+          </nav>
+          <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+        </div>
       </div>
-      <div class="intro-scroll">
-        <a href="#about" class=
-        "intro-scroll-link smoothscroll">Scroll For More</a>
-      </div>
-      <div class="intro-grid"></div>
-      <div class="intro-pic"></div>
-    </div><!-- end row -->
-  </section><!-- end intro -->
-  <!-- about
+    </header>
+    <!-- end s-header -->
+    <!-- intro
     ================================================== -->
-  <section id="about" class="s-about target-section">
-    <div class="about-me">
-      <div class="row heading-block" data-aos="fade-up">
+    <section id="intro" class="s-intro target-section">
+      <div class="row intro-content">
+        <div class="column large-8 mob-full intro-text">
+          <h3>Hello, I'm Aditya</h3>
+          <h1>
+            Computer Science Graduate.<br />
+            Eager to get real<br />
+            world experience<br />
+          </h1>
+        </div>
+        <div class="intro-scroll">
+          <a href="#about" class="intro-scroll-link smoothscroll"
+            >Scroll For More</a
+          >
+        </div>
+        <div class="intro-grid"></div>
+        <div class="intro-pic"></div>
+      </div>
+      <!-- end row -->
+    </section>
+    <!-- end intro -->
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+      <div class="about-me">
+        <div class="row heading-block" data-aos="fade-up">
+          <div class="column large-full">
+            <h2 class="section-heading">About Me</h2>
+          </div>
+        </div>
+        <div class="row about-me__content" data-aos="fade-up">
+          <div class="column large-full about-me__text">
+            <div class="about-me__column">
+              <p class="lead">
+                Welcome to my portfolio! My name is Aditya Singh, and I am a
+                passionate and dedicated Computer Science Engineer specializing
+                in DevOps. Based in Moradabad, Uttar Pradesh, I've completed my
+                Bachelor’s degree at the Moradabad Institute of Technology,
+                where I maintain a commendable CGPA of 7.1/10. This portfolio is
+                a reflection of my journey, skills, experiences, and the
+                projects that have shaped me into the developer I am today.
+              </p>
+              <p class="lead">
+                My academic journey has been both challenging and rewarding.
+                Pursuing a Bachelors in Computer Science Engineering with a
+                specialization in AI & Data Science has equipped me with a
+                robust foundation in both theoretical and practical aspects of
+                development and operations. My coursework and projects have
+                honed my skills in various programming languages, cloud
+                technologies, and LLM, AI tools, setting a strong base for my
+                professional endeavors.
+              </p>
+            </div>
+            <div class="about-me__column">
+              <p class="lead">
+                In addition to my programming skills, I am knowledgeable in web
+                development technologies such as HTML5, CSS, and JavaScript. I
+                have experience designing and building responsive and
+                user-friendly websites, and I am familiar with testing
+                framework. I also have experience working with databases using
+                MySQL.
+              </p>
+              <p class="lead">
+                My technical skills combined with my passion for problem-solving
+                make me a valuable asset to any team. I am able to quickly learn
+                new technologies and am always eager to take on new challenges.
+                I am confident that I have the skills and the drive to succeed
+                in the tech industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row about-me__buttons">
+          <div class="column large-half tab-full" data-aos="fade-up">
+            <a
+              href="mailto:aakshitasingh786@gmail.com?subject=Hiring%20Inquiry&amp;body=Dear%20[Your%20Name],%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20skills%20and%20experience.%20I%20am%20interested%20in%20discussing%20potential%20job%20opportunities%20with%20you.%0D%0A%0D%0ACould%20you%20please%20let%20me%20know%20your%20availability%20for%20a%20call?%0D%0A%0D%0AThank%20you,%0D%0A[Sender's%20Name]"
+              class="btn btn--stroke full-width"
+              >Hire Me</a
+            >
+          </div>
+          <div class="column large-half tab-full" data-aos="fade-up">
+            <a
+              href="Resume_latest.pdf"
+              class="btn btn--primary full-width"
+              download=""
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end about-me -->
+      <div class="about-experience">
+        <div class="row heading-block" data-aos="fade-up">
+          <div class="column large-full">
+            <h2 class="section-heading">Education</h2>
+          </div>
+        </div>
+        <div class="row about-experience__timeline">
+          <div class="column tab-full" data-aos="fade-up">
+            <div class="timeline">
+              <div class="timeline__icon-wrap"></div>
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                <div class="timeline__header">
+                  <p class="timeline__timeframe">Aug 2021 - May 2025</p>
+                  <h3 class="item-title">
+                    University of Petroleum and Energy Studies, Dehradun
+                  </h3>
+                  <h5>Bachelor Degree</h5>
+                </div>
+                <div class="timeline__desc">
+                  <p>
+                    I will be completed my Bachelor’s degree in Computer Science
+                    with specialization in AI and Data Science. During my
+                    studies, I have gained a strong foundation in computer
+                    science concepts such as algorithms, data structures, and
+                    computer Operating System and Architecture. I have also
+                    developed my skills in programming languages such as Python,
+                    Machine Learning, Deep Learning and worked on various
+                    projects that allowed me to apply my knowledge in practical
+                    settings. My education so far has equipped me with the
+                    skills and knowledge to excel in the field of computer
+                    science.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                <div class="timeline__header">
+                  <p class="timeline__timeframe">Apr 2008 - Apr 2021</p>
+                  <h3 class="item-title">St. Joseph's Academy, Dehradun</h3>
+                  <h5>High School</h5>
+                </div>
+                <div class="timeline__desc">
+                  <p>
+                    During my high school education, I developed a strong
+                    interest in subjects such as Math, Computer Science and
+                    Physics. I also enjoyed participating in sports and other
+                    physical activities. My high school education provided me
+                    with a well-rounded foundation and helped me discover my
+                    passions and interests.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end about-experience -->
+    </section>
+    <!-- end s-about -->
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services ss-dark target-section">
+      <div class="shadow-overlay"></div>
+      <div class="row heading-block heading-block--center" data-aos="fade-up">
         <div class="column large-full">
-          <h2 class="section-heading">About Me</h2>
+          <h2 class="section-heading section-heading--centerbottom">Skills</h2>
         </div>
       </div>
-      <div class="row about-me__content" data-aos="fade-up">
-        <div class="column large-full about-me__text">
-          <p class="lead">Welcome to my portfolio! My name is
-          Aditya Singh, and I am a passionate and dedicated
-          Computer Science Engineer specializing in DevOps. Based
-          in Moradabad, Uttar Pradesh, I've completed my
-          Bachelor’s degree at the Moradabad Institute of Technology, where I maintain a commendable CGPA of
-          7.1/10. This portfolio is a reflection of my journey,
-          skills, experiences, and the projects that have shaped me
-          into the developer I am today.</p>
-          <p class="lead">My academic journey has been both
-          challenging and rewarding. Pursuing a Bachelors in
-          Computer Science Engineering with a specialization in
-          AI & Data Science has equipped me with a robust foundation in both
-          theoretical and practical aspects of development
-          and operations. My coursework and projects have honed my
-          skills in various programming languages, cloud
-          technologies, and LLM, AI tools, setting a strong base for
-          my professional endeavors.</p>
-          <p class="lead">In addition to my programming skills, I
-          am knowledgeable in web development technologies such as
-          HTML5, CSS, and JavaScript. I have experience designing
-          and building responsive and user-friendly websites, and I
-          am familiar with testing framework. I also have
-          experience working with databases using MySQL.</p>
-          <p class="lead">My technical skills combined with my
-          passion for problem-solving make me a valuable asset to
-          any team. I am able to quickly learn new technologies and
-          am always eager to take on new challenges. I am confident
-          that I have the skills and the drive to succeed in the
-          tech industry.</p>
+      <!-- end heading-block -->
+      <div
+        class="row services-list block-large-1-3 block-medium-1-2 block-tab-full"
+      >
+        <div class="column item-service" data-aos="fade-up">
+          <div class="item-service__content">
+            <h4 class="item-title">Programming</h4>
+            <ul class="ul">
+              <li>Java</li>
+              <li>C</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>BashScript</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column item-service" data-aos="fade-up">
+          <div class="item-service__content">
+            <h4 class="item-title">Web Development</h4>
+            <ul class="ul">
+              <li>HTML/CSS</li>
+              <li>MySQL</li>
+              <li>ReactJS</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column item-service" data-aos="fade-up">
+          <div class="item-service__content">
+            <h4 class="item-title">Technical Skills</h4>
+            <ul class="ul">
+              <li>Data Structures</li>
+              <li>Operating System</li>
+              <li>Database Management</li>
+              <li>Git</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column item-service" data-aos="fade-up">
+          <div class="item-service__content">
+            <h4 class="item-title">Tools and Frameworks</h4>
+            <ul class="ul">
+              <li>Docker</li>
+              <li>Jenkins</li>
+              <li>Kubernetes</li>
+              <li>Nexus</li>
+              <li>Selenium</li>
+              <li>Maven</li>
+              <li>TestNG</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column item-service" data-aos="fade-up">
+          <div class="item-service__content">
+            <h4 class="item-title">Soft Skills</h4>
+            <ul class="ul">
+              <li>Teamwork</li>
+              <li>Problem-Solving</li>
+              <li>Documentation</li>
+              <li>Engaging Presentation</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="row about-me__buttons">
-        <div class="column large-half tab-full" data-aos="fade-up">
-          <a href=
-          "mailto:aakshitasingh786@gmail.com?subject=Hiring%20Inquiry&amp;body=Dear%20[Your%20Name],%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20skills%20and%20experience.%20I%20am%20interested%20in%20discussing%20potential%20job%20opportunities%20with%20you.%0D%0A%0D%0ACould%20you%20please%20let%20me%20know%20your%20availability%20for%20a%20call?%0D%0A%0D%0AThank%20you,%0D%0A[Sender's%20Name]"
-          class="btn btn--stroke full-width">Hire Me</a>
-        </div>
-        <div class="column large-half tab-full" data-aos="fade-up">
-          <a href="Resume_latest.pdf" class=
-          "btn btn--primary full-width" download="">Download CV</a>
-        </div>
-      </div>
-    </div><!-- end about-me -->
-    <div class="about-experience">
-      <div class="row heading-block" data-aos="fade-up">
+      <!-- end services-list -->
+    </section>
+    <!-- end s-services -->
+    <!-- works
+    ================================================== -->
+    <section id="work" class="s-works target-section">
+      <div class="row heading-block heading-block--center" data-aos="fade-up">
         <div class="column large-full">
-          <h2 class="section-heading">Education</h2>
+          <h2 class="section-heading section-heading--centerbottom">Work</h2>
         </div>
       </div>
-      <div class="row about-experience__timeline">
-        <div class="column tab-full" data-aos="fade-up">
-          <div class="timeline">
-            <div class="timeline__icon-wrap"></div>
-            <div class="timeline__block">
-              <div class="timeline__bullet"></div>
-              <div class="timeline__header">
-                <p class="timeline__timeframe">Aug 2021 - May
-                2025</p>
-                <h3 class="item-title">University of Petroleum and
-                Energy Studies, Dehradun</h3>
-                <h5>Bachelor Degree</h5>
+      <!--end heading-block -->
+      <div class="masonry-wrap">
+        <div class="masonry">
+          <div class="grid-sizer"></div>
+          <div class="masonry__brick" data-aos="fade-up">
+            <div class="item-folio">
+              <div class="item-folio__thumb">
+                <a
+                  href="images/CareerCompass.jpeg"
+                  class="thumb-link"
+                  title="Career Compass"
+                  data-size="1050x700"
+                  ><img
+                    src="images/CareerCompass.jpeg"
+                    srcset="images/CareerCompass.jpeg 1x"
+                    alt="Career Commpass Logo"
+                /></a>
+                <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
               </div>
-              <div class="timeline__desc">
-                <p>I will be completed my Bachelor’s degree in
-                Computer Science with specialization in AI and
-                Data Science. During my studies, I have gained a
-                strong foundation in computer science concepts such
-                as algorithms, data structures, and computer
-                Operating System and Architecture. I have also
-                developed my skills in programming languages such
-                as Python, Machine Learning, Deep Learning and worked on various projects
-                that allowed me to apply my knowledge in practical
-                settings. My education so far has equipped me with
-                the skills and knowledge to excel in the field of
-                computer science.</p>
+              <div class="item-folio__text">
+                <h4 class="item-folio__title">Career Compass</h4>
+                <p class="item-folio__cat">
+                  AI Based resume parser and automated job recommendation system
+                </p>
               </div>
-            </div>
-            <div class="timeline__block">
-              <div class="timeline__bullet"></div>
-              <div class="timeline__header">
-                <p class="timeline__timeframe">Apr 2008 - Apr
-                2021</p>
-                <h3 class="item-title">St. Joseph's Academy,
-                Dehradun</h3>
-                <h5>High School</h5>
-              </div>
-              <div class="timeline__desc">
-                <p>During my high school education, I developed a
-                strong interest in subjects such as Math, Computer
-                Science and Physics. I also enjoyed participating
-                in sports and other physical activities. My high
-                school education provided me with a well-rounded
-                foundation and helped me discover my passions and
-                interests.</p>
+              <div class="item-folio__caption">
+                <p>
+                  An AI Based resume parser and automated job recommendation
+                  system, that eases the process of searching for job roles and
+                  fitting and matching where your own resume stands. Parses the
+                  resume and predicts what job role best suits you.
+                </p>
+                <p>
+                  <u><b>Technical Skills</b></u> <b>:</b> Python, Streamlit,
+                  KNN, HTML, CSS, GitHub Pages
+                </p>
+                <a href="https://github.com/aakshitaa/CareerCompass"
+                  ><u>Link to GitHub</u></a
+                ><br />
+                <a href="https://aakshitaa.github.io/CareerCompass/"
+                  ><u>Deployed Application</u></a
+                >
               </div>
             </div>
           </div>
+          <!-- end masonry__brick -->
+          <div class="masonry__brick" data-aos="fade-up">
+            <div class="item-folio">
+              <div class="item-folio__thumb">
+                <a
+                  href="images/Lost_and_Found.png"
+                  class="thumb-link"
+                  title="Lost and Found WebApp"
+                  data-size="1050x700"
+                  ><img
+                    src="images/Lost_and_Found.png"
+                    srcset="images/Lost_and_Found.png"
+                    alt="Lost and Found WebApp Logo"
+                /></a>
+                <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
+              </div>
+              <div class="item-folio__text">
+                <h4 class="item-folio__title">Lost and Found WebApp</h4>
+                <p class="item-folio__cat">
+                  One stop solution for university lost and found department
+                </p>
+              </div>
+              <div class="item-folio__caption">
+                <p>
+                  A webapp for the university that will ease the process of
+                  retrieving lost items. It is a big problem when you lose
+                  valuable items, and in that scenario, it becomes helpful if
+                  you are able to see through a list of items found lately, and
+                  luckily, if you do find your item there, then you save a lot
+                  of time and sweat.
+                </p>
+                <p>
+                  <u><b>Technical Skills</b></u> <b>:</b> MongoDB, ReactJS,
+                  NodeJS, ExpressJS, Netlify, Cyclic
+                </p>
+                <a
+                  href="https://github.com/aakshitaa/OSoC-Lost-And-Found-WebApp"
+                  ><u>Link to GitHub</u></a
+                ><br />
+                <a href="https://osoc-lost-and-found-webapp.netlify.app/"
+                  ><u>Deployed Application</u></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- end masonry__brick -->
+          <div class="masonry__brick" data-aos="fade-up">
+            <div class="item-folio">
+              <div class="item-folio__thumb">
+                <a
+                  href="images/busicon.png"
+                  class="thumb-link"
+                  title="Bus Tracking System"
+                  data-size="1050x700"
+                  ><img
+                    src="images/busicon.png"
+                    srcset="images/busicon.png"
+                    alt="Bus Tracking System"
+                /></a>
+                <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
+              </div>
+              <div class="item-folio__text">
+                <h4 class="item-folio__title">Bus Tracking System</h4>
+                <p class="item-folio__cat">
+                  Android Application for University Bus Facility
+                </p>
+              </div>
+              <div class="item-folio__caption">
+                <p>
+                  An app that helps track the live location of college buses
+                  with ease!!! It uses Flutter and Google Maps API to get the
+                  live location of drivers and users, and displays the estimated
+                  time the bus will take to reach the user's stop so that they
+                  can board the bus without any hassel.
+                </p>
+                <p>
+                  <u><b>Technical Skills</b></u> <b>:</b> Flutter, Firebase,
+                  Google OAuth
+                </p>
+                <a href="https://github.com/aakshitaa/Bus-Tracking-system"
+                  ><u>Link to GitHub</u></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- end masonry__brick -->
+          <div class="masonry__brick" data-aos="fade-up">
+            <div class="item-folio">
+              <div class="item-folio__thumb">
+                <a
+                  href="images/bot.jpg"
+                  class="thumb-link"
+                  title="Image Detecting Telegram Bot"
+                  data-size="1050x900"
+                  ><img
+                    src="images/bot.jpg"
+                    srcset="images/bot.jpg 1x, images/bot.jpg 2x"
+                    alt="Image Detecting Telegram Bot"
+                /></a>
+                <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
+              </div>
+              <div class="item-folio__text">
+                <h4 class="item-folio__title">Image Detecting Telegram Bot</h4>
+                <p class="item-folio__cat">AI Bot</p>
+              </div>
+              <div class="item-folio__caption">
+                <p>
+                  A telegram bot that chats with the user and shares the details
+                  about the image the user shared with it. For example if you
+                  send a picture of 2 girls and a tree then it will provide the
+                  detected objects to you via text message.It is containerized
+                  using Docker.
+                </p>
+                <p>
+                  <u><b>Technical Skills</b></u>
+                  <b>:</b> Docker,Python,HTML,CSS,JS
+                </p>
+                <a
+                  href="https://github.com/aakshitaa/Image_detecting_telegram_bot"
+                  ><u>Link to GitHub</u></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- end masonry__brick -->
         </div>
+        <!-- end masonry -->
       </div>
-    </div><!-- end about-experience -->
-  </section><!-- end s-about -->
-  <!-- services
+      <!-- end masonry-wrap -->
+    </section>
+    <!-- end s-work -->
+    <!-- contact
     ================================================== -->
-  <section id="services" class="s-services ss-dark target-section">
-    <div class="shadow-overlay"></div>
-    <div class="row heading-block heading-block--center" data-aos=
-    "fade-up">
-      <div class="column large-full">
-        <h2 class="section-heading section-heading--centerbottom">
-        Skills</h2>
-      </div>
-    </div><!-- end heading-block -->
-    <div class=
-    "row services-list block-large-1-3 block-medium-1-2 block-tab-full">
-      <div class="column item-service" data-aos="fade-up">
-        <div class="item-service__content">
-          <h4 class="item-title">Programming</h4>
-          <ul class="ul">
-            <li>Java</li>
-            <li>C</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>BashScript</li>
-          </ul>
+    <section id="contact" class="s-works target-section">
+      <div class="row heading-block aos-init aos-animate" data-aos="fade-up">
+        <div class="column large-full">
+          <h2 class="section-heading">Get In Touch</h2>
         </div>
+        <p class="section-desc">
+          I'm happy to connect, listen and help. Let's work together and build
+          something awesome. Let's turn your idea to an even greater product.
+          <a href="mailto:aakshitasingh786@gmail.com">Email Me</a>
+        </p>
       </div>
-      <div class="column item-service" data-aos="fade-up">
-        <div class="item-service__content">
-          <h4 class="item-title">Web Development</h4>
-          <ul class="ul">
-            <li>HTML/CSS</li>
-            <li>MySQL</li>
-            <li>ReactJS</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-      </div>
-      <div class="column item-service" data-aos="fade-up">
-        <div class="item-service__content">
-          <h4 class="item-title">Technical Skills</h4>
-          <ul class="ul">
-            <li>Data Structures</li>
-            <li>Operating System</li>
-            <li>Database Management</li>
-            <li>Git</li>
-          </ul>
-        </div>
-      </div>
-      <div class="column item-service" data-aos="fade-up">
-        <div class="item-service__content">
-          <h4 class="item-title">Tools and Frameworks</h4>
-          <ul class="ul">
-            <li>Docker</li>
-            <li>Jenkins</li>
-            <li>Kubernetes</li>
-            <li>Nexus</li>
-            <li>Selenium</li>
-            <li>Maven</li>
-            <li>TestNG</li>
-          </ul>
-        </div>
-      </div>
-      <div class="column item-service" data-aos="fade-up">
-        <div class="item-service__content">
-          <h4 class="item-title">Soft Skills</h4>
-          <ul class="ul">
-            <li>Teamwork</li>
-            <li>Problem-Solving</li>
-            <li>Documentation</li>
-            <li>Engaging Presentation</li>
-          </ul>
-        </div>
-      </div>
-    </div><!-- end services-list -->
-  </section><!-- end s-services -->
-  <!-- works
-    ================================================== -->
-  <section id="work" class="s-works target-section">
-    <div class="row heading-block heading-block--center" data-aos=
-    "fade-up">
-      <div class="column large-full">
-        <h2 class="section-heading section-heading--centerbottom">
-        Work</h2>
-      </div>
-    </div><!--end heading-block -->
-    <div class="masonry-wrap">
-      <div class="masonry">
-        <div class="grid-sizer"></div>
-        <div class="masonry__brick" data-aos="fade-up">
-          <div class="item-folio">
-            <div class="item-folio__thumb">
-              <a href="images/CareerCompass.jpeg" class=
-              "thumb-link" title="Career Compass" data-size=
-              "1050x700"><img src="images/CareerCompass.jpeg"
-              srcset="images/CareerCompass.jpeg 1x" alt=
-              "Career Commpass Logo"></a> 
-              <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
-            </div>
-            <div class="item-folio__text">
-              <h4 class="item-folio__title">Career Compass</h4>
-              <p class="item-folio__cat">AI Based resume parser and
-              automated job recommendation system</p>
-            </div>
-            <div class="item-folio__caption">
-              <p>An AI Based resume parser and automated job
-              recommendation system, that eases the process of
-              searching for job roles and fitting and matching
-              where your own resume stands. Parses the resume and
-              predicts what job role best suits you.</p>
-              <p><u><b>Technical Skills</b></u> <b>:</b> Python,
-              Streamlit, KNN, HTML, CSS, GitHub Pages</p><a href=
-              "https://github.com/aakshitaa/CareerCompass"><u>Link
-              to GitHub</u></a><br>
-              <a href=
-              "https://aakshitaa.github.io/CareerCompass/"><u>Deployed
-              Application</u></a>
-            </div>
-          </div>
-        </div><!-- end masonry__brick -->
-        <div class="masonry__brick" data-aos="fade-up">
-          <div class="item-folio">
-            <div class="item-folio__thumb">
-              <a href="images/Lost_and_Found.png" class=
-              "thumb-link" title="Lost and Found WebApp" data-size=
-              "1050x700"><img src="images/Lost_and_Found.png"
-              srcset="images/Lost_and_Found.png" alt=
-              "Lost and Found WebApp Logo"></a> 
-              <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
-            </div>
-            <div class="item-folio__text">
-              <h4 class="item-folio__title">Lost and Found
-              WebApp</h4>
-              <p class="item-folio__cat">One stop solution for
-              university lost and found department</p>
-            </div>
-            <div class="item-folio__caption">
-              <p>A webapp for the university that will ease the
-              process of retrieving lost items. It is a big problem
-              when you lose valuable items, and in that scenario,
-              it becomes helpful if you are able to see through a
-              list of items found lately, and luckily, if you do
-              find your item there, then you save a lot of time and
-              sweat.</p>
-              <p><u><b>Technical Skills</b></u> <b>:</b> MongoDB,
-              ReactJS, NodeJS, ExpressJS, Netlify,
-              Cyclic</p><a href=
-              "https://github.com/aakshitaa/OSoC-Lost-And-Found-WebApp"><u>Link
-              to GitHub</u></a><br>
-              <a href=
-              "https://osoc-lost-and-found-webapp.netlify.app/"><u>Deployed
-              Application</u></a>
-            </div>
-          </div>
-        </div><!-- end masonry__brick -->
-        <div class="masonry__brick" data-aos="fade-up">
-          <div class="item-folio">
-            <div class="item-folio__thumb">
-              <a href="images/busicon.png" class="thumb-link"
-              title="Bus Tracking System" data-size=
-              "1050x700"><img src="images/busicon.png" srcset=
-              "images/busicon.png" alt="Bus Tracking System"></a> 
-              <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
-            </div>
-            <div class="item-folio__text">
-              <h4 class="item-folio__title">Bus Tracking
-              System</h4>
-              <p class="item-folio__cat">Android Application for
-              University Bus Facility</p>
-            </div>
-            <div class="item-folio__caption">
-              <p>An app that helps track the live location of
-              college buses with ease!!! It uses Flutter and Google
-              Maps API to get the live location of drivers and
-              users, and displays the estimated time the bus will
-              take to reach the user's stop so that they can board
-              the bus without any hassel.</p>
-              <p><u><b>Technical Skills</b></u> <b>:</b> Flutter,
-              Firebase, Google OAuth</p><a href=
-              "https://github.com/aakshitaa/Bus-Tracking-system"><u>Link
-              to GitHub</u></a>
-            </div>
-          </div>
-        </div><!-- end masonry__brick -->
-        <div class="masonry__brick" data-aos="fade-up">
-          <div class="item-folio">
-            <div class="item-folio__thumb">
-              <a href="images/bot.jpg" class="thumb-link" title=
-              "Image Detecting Telegram Bot" data-size=
-              "1050x900"><img src="images/bot.jpg" srcset=
-              "images/bot.jpg 1x, images/bot.jpg 2x" alt=
-              "Image Detecting Telegram Bot"></a> 
-              <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a> -->
-            </div>
-            <div class="item-folio__text">
-              <h4 class="item-folio__title">Image Detecting
-              Telegram Bot</h4>
-              <p class="item-folio__cat">AI Bot</p>
-            </div>
-            <div class="item-folio__caption">
-              <p>A telegram bot that chats with the user and shares
-              the details about the image the user shared with it.
-              For example if you send a picture of 2 girls and a
-              tree then it will provide the detected objects to you
-              via text message.It is containerized using
-              Docker.</p>
-              <p><u><b>Technical Skills</b></u> <b>:</b>
-              Docker,Python,HTML,CSS,JS</p><a href=
-              "https://github.com/aakshitaa/Image_detecting_telegram_bot"><u>Link
-              to GitHub</u></a>
-            </div>
-          </div>
-        </div><!-- end masonry__brick -->
-      </div><!-- end masonry -->
-    </div><!-- end masonry-wrap -->
-  </section><!-- end s-work -->
-  <!-- contact
-    ================================================== -->
-  <section id="contact" class="s-works target-section">
-    <div class="row heading-block aos-init aos-animate" data-aos=
-    "fade-up">
-      <div class="column large-full">
-        <h2 class="section-heading">Get In Touch</h2>
-      </div>
-      <p class="section-desc">I'm happy to connect, listen and
-      help. Let's work together and build something awesome. Let's
-      turn your idea to an even greater product. <a href=
-      "mailto:aakshitasingh786@gmail.com">Email Me</a></p>
-    </div>
-    <div class="row contact-infos aos-init aos-animate" data-aos=
-    "fade-up" data-aos-anchor=".contact-main">
-      <!-- <div class="column large-5 medium-full contact-phone">
+      <div
+        class="row contact-infos aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-anchor=".contact-main"
+      >
+        <!-- <div class="column large-5 medium-full contact-phone">
                 <h4>Call Me</h4>
                 <a href="tel:9739443498">9739443498</a>
             </div> -->
-      <div class="column large-7 medium-full contact-social">
-        <h4>Social</h4>
-        <ul>
-          <li>
-            <a href=
-            "https://linkedin.com/in/aakshita-singh-44794b227"
-            title="LinkedIn">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/aakshitaa" title=
-            "GitHub">GitHub</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/aakshita_singh" title=
-            "Twitter">Twitter</a>
-          </li>
-        </ul>
+        <div class="column large-7 medium-full contact-social">
+          <h4>Social</h4>
+          <ul>
+            <li>
+              <a
+                href="https://linkedin.com/in/aakshita-singh-44794b227"
+                title="LinkedIn"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/aakshitaa" title="GitHub">GitHub</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/aakshita_singh" title="Twitter"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section><!-- end s-work -->
-  <!-- footer
+    </section>
+    <!-- end s-work -->
+    <!-- footer
     ================================================== -->
-  <footer>
-    <div class="row">
-      <div class="column large-full ss-copyright">
-        <span>© Copyright SK7</span> <span>Design by
-        Aakshita</span>
+    <footer>
+      <div class="row">
+        <div class="column large-full ss-copyright">
+          <span>© Copyright SK7</span> <span>Design by Aakshita</span>
+        </div>
+        <div class="ss-go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
       </div>
-      <div class="ss-go-top">
-        <a class="smoothscroll" title="Back to Top" href=
-        "#top"></a>
-      </div>
-    </div>
-  </footer><!-- photoswipe background
+    </footer>
+    <!-- photoswipe background
     ================================================== -->
-  <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class=
-        "pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div><!-- end photoSwipe background -->
-  <!-- Java Script
+    <!-- end photoSwipe background -->
+    <!-- Java Script
     ================================================== -->
-  <script src="js/jquery-3.2.1.min.js"></script> 
-  <script src="js/plugins.js"></script> 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scroll-animations.js"></script>
+  </body>
 </html>

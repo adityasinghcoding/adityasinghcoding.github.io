@@ -1,0 +1,867 @@
+/* Main CSS for the website */
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding-top: 50px; /* Offset for fixed nav bar height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+}
+
+.btn--primary:hover {
+  background-color: #ad1457;
+}
+
+.btn--stroke {
+  border: 2px solid #e91e63;
+  color: #e91e63;
+  background: transparent;
+}
+
+.btn--stroke:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+/* Navigation styles */
+.s-header {
+  background-color: #000 !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+}
+
+/* Hide homepage button (site logo) */
+.site-logo {
+  display: none !important;
+}
+
+/* Intro section layout update to match reference image */
+.s-intro {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  min-height: 100vh !important;
+  padding: 0 4rem !important;
+  text-align: left !important;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #0a0a0a !important;
+}
+
+.intro-text {
+  flex: 0 0 45%;
+  max-width: 45%;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: left;
+}
+
+.intro-text h3 {
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 100%;
+  color: #fff;
+}
+
+.intro-pic {
+  flex: 0 0 45%;
+  max-width: 45%;
+  height: 400px;
+  background: url("../images/intro-illustration.png") no-repeat center center;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(233, 30, 99, 0.5);
+  margin-left: auto;
+}
+
+.intro-text {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.intro-text h3 {
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 600px;
+  color: #fff;
+}
+
+.intro-pic {
+  flex: 1 1 40%;
+  max-width: 40%;
+  height: 400px;
+  background: url("../images/intro-illustration.png") no-repeat center center;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(233, 30, 99, 0.5);
+  margin-left: auto;
+}
+
+.s-header .header-main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.s-header .header-main-nav li a {
+  color: #bbb;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.s-header .header-main-nav li.current a,
+.s-header .header-main-nav li a:hover {
+  color: #e91e63;
+}
+
+/* Social icons */
+.header-social li a {
+  color: #bbb;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.header-social li a:hover {
+  color: #e91e63;
+}
+
+/* Intro section */
+.s-intro {
+  display: block;
+  padding: 6rem 2rem 4rem 2rem;
+  min-height: auto;
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  background-color: transparent;
+}
+
+.intro-text {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.intro-text h3 {
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 900;
+  max-width: 600px;
+  color: #fff;
+}
+
+.intro-pic {
+  flex: 1 1 40%;
+  max-width: 40%;
+  height: 400px;
+  background: url("../images/intro-illustration.png") no-repeat center center;
+  background-size: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(233, 30, 99, 0.5);
+  margin-left: auto;
+}
+
+/* Scroll for more link */
+.intro-scroll-link {
+  color: #bbb;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e91e63;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: color 0.3s ease;
+}
+
+.intro-scroll-link:hover {
+  color: #e91e63;
+}
+
+/* Add more styles as needed for layout, navigation, sections, etc. */
+
+/* About section */
+.s-about {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #222;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+}
+
+.about-me__text {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.about-me__column {
+  flex: 1 1 45%;
+}
+
+.about-me__column p.lead {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Buttons row */
+.about-me__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+}
+
+.about-me__buttons .btn {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.about-me__buttons .btn--stroke {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.about-me__buttons .btn--stroke:hover {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.about-me__buttons .btn--primary {
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
+.about-me__buttons .btn--primary:hover {
+  background-color: #ad1457;
+}
+
+/* Hide menu button in header */
+.header-menu-toggle {
+  display: none !important;
+}
+
+/* Skills section */
+.s-services {
+  position: relative;
+  padding: 4rem 2rem;
+  background-color: #0a0a0a;
+  color: #fff;
+  text-align: center;
+  background-image: url("../images/skills-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Fix Skills heading color and underline */
+.s-services .section-heading {
+  position: relative;
+  color: #fff !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  z-index: 2;
+  display: inline-block;
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 0.5rem;
+}
+
+.s-services .section-heading::after {
+  content: none;
+}
+
+/* Fix numbering overlap in Skills section */
+.services-list {
+  counter-reset: skill-counter;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.services-list .item-service__content h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.services-list .item-service__content h4::before {
+  content: counter(skill-counter, decimal-leading-zero) ".";
+  counter-increment: skill-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e91e63;
+  font-family: "Arial Black", Arial, sans-serif;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Make only the first number white */
+.services-list .item-service__content:first-child h4::before {
+  color: #fff;
+}
+
+.services-list .item-service {
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  position: relative;
+}
+
+.s-services .shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  z-index: 1;
+}
+
+.s-services .section-heading {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  z-index: 2;
+  display: inline-block;
+}
+
+.s-services .section-heading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e91e63;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.services-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.services-list .item-service {
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  position: relative;
+}
+
+.services-list .item-service:nth-child(4),
+.services-list .item-service:nth-child(5) {
+  grid-column: span 1;
+}
+
+.services-list .item-service__content {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.services-list .item-service__content h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.services-list {
+  counter-reset: skill-counter;
+}
+
+.services-list .item-service__content h4::before {
+  content: counter(skill-counter, decimal-leading-zero) ".";
+  counter-increment: skill-counter;
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e91e63;
+  font-family: "Arial Black", Arial, sans-serif;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Make only the first number white */
+.services-list .item-service__content:first-child h4::before {
+  color: #fff;
+}
+
+/* Make the Skills heading white and underline visible */
+.s-services .section-heading {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  z-index: 2;
+  display: inline-block;
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 0.5rem;
+}
+
+.s-services .section-heading::after {
+  content: none;
+}
+
+.services-list .item-service__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list .item-service__content ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.services-list .item-service__content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-size: 1.25rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* About Experience / Education Section */
+.about-experience {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+}
+
+.about-experience .section-heading {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+  text-align: left;
+  max-width: 900px;
+  margin-left: 0;
+}
+
+.about-experience .section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #e91e63;
+  border-radius: 2px;
+}
+
+/* Fix About Me section heading color */
+.s-about .section-heading {
+  color: #222 !important;
+  text-align: left !important;
+  max-width: 900px;
+  /* Remove margin-left to align with centered content */
+  margin: 0 auto 2rem auto;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  border-left: 3px solid #e91e63;
+}
+
+.timeline__block {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 20px;
+}
+
+.timeline__bullet {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 3px solid #e91e63;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.timeline__icon-wrap {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../images/graduation-cap.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.timeline__header {
+  margin-bottom: 0.5rem;
+}
+
+.timeline__timeframe {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.timeline__header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.timeline__header h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #444;
+  margin: 0;
+}
+
+.timeline__desc p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.s-services .section-heading {
+  color: #fff;
+  text-align: center;
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.item-service {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(233, 30, 99, 0.3);
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+}
+
+.item-service__content h4 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #e91e63;
+}
+
+.item-service__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-service__content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Work section */
+.s-works {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #222;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+  background-image: none;
+}
+
+.s-works .section-heading {
+  color: #222;
+  text-align: center;
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.masonry-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.masonry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.masonry__brick {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+  color: #fff;
+  text-align: left;
+  padding: 1rem;
+}
+
+.item-folio__text h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #e91e63;
+}
+
+.item-folio__text p {
+  margin-bottom: 1rem;
+}
+
+.item-folio__caption p {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.item-folio__caption a {
+  color: #e91e63;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Contact section */
+.s-works.target-section {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  color: #222;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Georgia", serif;
+}
+
+.s-works.target-section h2.section-heading {
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #e91e63;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.s-works.target-section p.section-desc {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: #222;
+  max-width: 600px;
+}
+
+.s-works.target-section a {
+  color: #e91e63;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.s-works.target-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: "Arial", sans-serif;
+}
+
+footer a {
+  color: #e91e63;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Back to top button */
+.ss-go-top a {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #e91e63;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Back to top text vertical on right side */
+.ss-go-top a::after {
+  content: "BACK TO TOP";
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.7rem;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.ss-go-top a:hover {
+  background-color: #ad1457;
+}

@@ -1,29 +1,21 @@
-# Aditya Singh — World-Class Dynamic Portfolio
+# Aditya Portfolio Website
 
-A stunning, glassmorphic, animated portfolio—auto-loads your GitHub projects, with dark/light mode and modern design.
+This is the source code for the portfolio website of Aditya Singh.
 
-## Features
+## Structure
 
-- Dynamic project grid (loads from your GitHub)
-- Glassmorphism, gradients, elegant animation
-- Sticky glass navbar
-- Dark/light mode with toggle (remembers preference)
-- Responsive, mobile-first
-- Easy to edit sections and add your resume
+- `index.html`: Main HTML file for the website.
+- `css/`: Contains CSS files for styling.
+- `js/`: Contains JavaScript files for interactivity.
+- `images/`: Directory for images used in the website.
+- `site.webmanifest`: Web app manifest file.
 
-## How to Customize
+## Setup
 
-- All content is in `index.html`. Edit About, Skills, Contact, etc.
-- Your public projects are pulled automatically from your [GitHub profile](https://github.com/adityasinghcoding), by description.
-- Add your `resume.pdf` for the download link to work.  
-- For custom/manual projects, you can add project cards in HTML.
+To view the website, open `index.html` in a web browser.
 
-## Deploy
+## Notes
 
-Push changes to `main` branch.  
-Your site is live at:  
-`https://adityasinghcoding.github.io/`
-
----
-
-Enjoy your new world-class portfolio!
+- Placeholder CSS and JS files have been created to support the website structure.
+- Add your images to the `images/` directory as referenced in the HTML.
+- Replace placeholder JS libraries with actual libraries if needed.
