@@ -1,0 +1,117 @@
+:root {
+    --primary-bg: #18191a;
+    --primary-text: #f5f6fa;
+    --secondary-bg: #23272f;
+    --accent: #00b894;
+    --card-bg: #222326;
+}
+body {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+header {
+    background: var(--secondary-bg);
+    padding: 2rem 0;
+    text-align: center;
+}
+nav ul {
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+}
+nav ul li a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: var(--accent);
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+.subtitle {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+main {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+section {
+    margin-bottom: 3rem;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.project-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.2rem;
+    min-width: 250px;
+    flex: 1 1 280px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.28);
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    background: var(--card-bg);
+    color: var(--accent);
+    padding: 0.4em 1em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: var(--secondary-bg);
+    color: #888;
+    margin-top: 2rem;
+}
+#darkModeToggle {
+    margin-top: 1.2rem;
+    padding: 0.4em 1.1em;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+#darkModeToggle:hover {
+    background: #019875;
+}
+
+/* Light mode styles */
+body.light {
+    --primary-bg: #f5f6fa;
+    --primary-text: #222326;
+    --secondary-bg: #e3e6eb;
+    --card-bg: #fff;
+    --accent: #0984e3;
+}
