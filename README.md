@@ -1,27 +1,29 @@
-# Aditya Singh — Modern Portfolio
+# Aditya Singh — World-Class Dynamic Portfolio
 
-A Google/Apple inspired, minimal portfolio — with glassmorphism, dark/light mode, sticky nav, project grid, and smooth animations.
+A stunning, glassmorphic, animated portfolio—auto-loads your GitHub projects, with dark/light mode and modern design.
 
 ## Features
 
-- Ultra-modern, minimal design (like Google/Apple)
-- Glassy cards and sticky header
+- Dynamic project grid (loads from your GitHub)
+- Glassmorphism, gradients, elegant animation
+- Sticky glass navbar
 - Dark/light mode with toggle (remembers preference)
-- Animated section entry & project cards
-- Responsive, mobile-friendly
-- Easy to add projects, skills, contact, resume
+- Responsive, mobile-first
+- Easy to edit sections and add your resume
 
 ## How to Customize
 
-- Edit `index.html` for your bio, projects, skills, email, etc.
-- Add your `resume.pdf` to the repo for the download link.
-- Duplicate `<div class="project-card">...</div>` to add more projects.
+- All content is in `index.html`. Edit About, Skills, Contact, etc.
+- Your public projects are pulled automatically from your [GitHub profile](https://github.com/adityasinghcoding), by description.
+- Add your `resume.pdf` for the download link to work.  
+- For custom/manual projects, you can add project cards in HTML.
 
 ## Deploy
 
-Push changes to your `main` branch — your site is live at:  
+Push changes to `main` branch.  
+Your site is live at:  
 `https://adityasinghcoding.github.io/`
 
 ---
 
-Inspired by the best of Google & Apple web design.
+Enjoy your new world-class portfolio!
