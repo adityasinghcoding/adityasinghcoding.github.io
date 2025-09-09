@@ -1,28 +1,27 @@
-# Aditya Singh's AI Portfolio
+# Aditya Singh — Modern Portfolio
 
-This is a modern, animated, dark-mode enabled portfolio for a fresher learning and working on Agentic AI projects.
+A Google/Apple inspired, minimal portfolio — with glassmorphism, dark/light mode, sticky nav, project grid, and smooth animations.
 
 ## Features
 
-- Dark mode toggle (🌙)
-- Smooth animations (Animate.css)
-- Responsive and modern design
-- Project cards with GitHub links
-- Skills, About, Resume, and Contact sections
+- Ultra-modern, minimal design (like Google/Apple)
+- Glassy cards and sticky header
+- Dark/light mode with toggle (remembers preference)
+- Animated section entry & project cards
+- Responsive, mobile-friendly
+- Easy to add projects, skills, contact, resume
 
 ## How to Customize
 
-- Edit `index.html` to update your name, tagline, projects, and contact details.
-- Add your resume as `resume.pdf` for the download link.
-- To add more projects, duplicate the `<div class="project-card">...</div>` block.
-- Change skills inside the `<ul class="skills-list">...</ul>`.
+- Edit `index.html` for your bio, projects, skills, email, etc.
+- Add your `resume.pdf` to the repo for the download link.
+- Duplicate `<div class="project-card">...</div>` to add more projects.
 
-## Deployment
+## Deploy
 
-Just push changes to the `main` branch.
-Your site will be live at:  
+Push changes to your `main` branch — your site is live at:  
 `https://adityasinghcoding.github.io/`
 
 ---
 
-Good luck with your AI journey!
+Inspired by the best of Google & Apple web design.
