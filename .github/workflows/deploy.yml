@@ -1,0 +1,26 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      # Add your build steps here if needed, e.g., for static site generators
+      # - name: Build site
+      #   run: your-build-command
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # path to your built site files (or root if static files)
+          destination_repo: adityasinghcoding/adityasinghcoding.github.io
+          # optionally specify branch: gh-pages (default)
