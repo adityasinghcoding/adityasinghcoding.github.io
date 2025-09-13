@@ -1,3 +1,0 @@
-Placeholder for Resume_latest.pdf
-
-Add your resume PDF file here and rename it to Resume_latest.pdf as referenced in index.html.
