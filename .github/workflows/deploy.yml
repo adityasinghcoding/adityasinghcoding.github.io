@@ -13,12 +13,12 @@ jobs:
       - name: Checkout private repo code
         uses: actions/checkout@v3
 
-      # If you have a build step, uncomment and edit these lines:
-      - name: Install dependencies
-        run: npm install
+      # Uncomment these if you have a build step
+      # - name: Install dependencies
+      #   run: npm install
       
-      - name: Build website
-        run: npm run build
+      # - name: Build website
+      #   run: npm run build
 
       - name: Deploy to GitHub Pages public repo
         run: |
@@ -26,7 +26,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git clone https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/adityasinghcoding/adityasinghcoding.github.io.git public_repo
           rm -rf public_repo/*
-          cp -r ./* public_repo/  # Adjust './public/' to your built site folder or root if static files
+          cp -r ./* public_repo/
           cd public_repo
           git add .
           git commit -m "Deploy portfolio site"
