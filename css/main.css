@@ -3194,9 +3194,15 @@ input::-moz-focus-inner {
     height: 100%;
   }
 
+  .btn {
+    min-height: 48px;
+    height: 7rem;
+    line-height: 6.6rem;
+  }
+
   .contact-social ul li a {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .timeline::after {
