@@ -2725,6 +2725,8 @@ input::-moz-focus-inner {
 
     .intro-text h1 {
       font-size: 4.8rem;
+      margin-top: auto; /* newly added*/
+      padding-top: 2rem;
     }
 
     .intro-scroll {
