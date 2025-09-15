@@ -2701,21 +2701,29 @@ input::-moz-focus-inner {
   }
 
   .intro-pic {
-    position: static;
-    width: 80vh; /* newly added [200px]*/
+    position: relative; /* newly added [static]*/
+    width: 80vw; /* newly added [200px]*/
     max-width: 200px; /* newly added*/
     height: auto; /* newly added [200px]*/
     margin-bottom: 10%;
     border-radius: 50%;
-    opacity: 0.5;
+    /* opacity: 1; */
   }
 
-  /* .intro-pic::before {
-    opacity: 0.4;
-  } */
+  .intro-pic::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* background: black;  or rgba(0,0,0,0.7) for dark overlay */
+    opacity: 0.7;
+    border-radius: 50%;
+    pointer-events: none; /* allow clicks through */
+  }
+}
 
   .intro-grid {
     left: 0; /* newly added [10%]*/
+    opacity: 1;
 
     .intro-text {
       -webkit-transform: none;
