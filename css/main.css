@@ -414,7 +414,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #cf1767;
+  background: #7e7e7e;
   position: absolute;
   left: -16px;
   top: 11px;
@@ -819,7 +819,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #cf1767;
+  -webkit-text-fill-color: #7e7e7e;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -832,7 +832,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
+  display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -1398,7 +1398,7 @@ input::-moz-focus-inner {
 
 .pgn .current,
 .pgn .current:hover {
-  background-color: #cf1717;
+  background-color: #7e7e7e;
   color: white;
 }
 
@@ -3275,7 +3275,7 @@ input::-moz-focus-inner {
 }
 
 .s-services a {
-  color: #cf1767;
+  color: #7e7e7e;
 }
 
 .s-services a:hover,
@@ -3397,7 +3397,7 @@ input::-moz-focus-inner {
 .s-cta a:hover,
 .s-cta a:focus,
 .s-cta a:active {
-  color: #cf1767;
+  color: #7e7e7e;
 }
 
 .s-cta .section-desc {
@@ -3411,7 +3411,7 @@ input::-moz-focus-inner {
 .cta-content .btn {
   max-width: 600px;
   background-color: #7e7e7e;
-  border: 0.2rem solid #cf1767;
+  border: 0.2rem solid #7e7e7e;
 }
 
 .cta-content .btn:hover,
@@ -3541,7 +3541,7 @@ input::-moz-focus-inner {
   display: block;
   width: 6.4rem;
   height: 6.4rem;
-  background-color: #cf1767;
+  background-color: #7e7e7e;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 30%;
@@ -3811,7 +3811,7 @@ input::-moz-focus-inner {
 
 .testimonials__slider .slick-dots li.slick-active button,
 .testimonials__slider .slick-dots li:hover button {
-  background: #cf1767;
+  background: #7e7e7e;
 }
 
 .testimonials__slide {
