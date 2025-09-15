@@ -898,6 +898,7 @@ input[type="button"].btn--primary:focus {
   outline: 0;
 }
 
+
 /* button modifiers
  * ------------------------------------------------- */
 .btn.full-width,
@@ -944,6 +945,7 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 
 /* =================================================================== 
  * # additional components
@@ -1967,8 +1969,8 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 600px) {
   .header-logo {
-    left: 35px;
-    width: 35%;
+    left: 30px;
+    width: 30vw;
     height: 35%;
   }
 }
@@ -2035,7 +2037,7 @@ input::-moz-focus-inner {
   background-image: url(../images/pattern-dot-grid.svg);
   background-size: 24px 24px;
   opacity: 0.3;
-  position: fixed;
+  position: relative;
   top: 20%;
   right: 20%;
   bottom: 0;
@@ -2697,45 +2699,54 @@ input::-moz-focus-inner {
     flex-direction: column;
     align-items: center;
     text-align: center; /* newly added*/
-    padding-top: 4rem;
+    padding-top: 150px;
   }
 
   .intro-pic {
     position: static;
     width: 80vw; /* newly added [200px]*/
-    max-width: 200px; /* newly added*/
+    max-width: 260px; /* newly added*/
     height: auto; /* newly added [200px]*/
-    margin-bottom: 10%;
+    margin-top: -20%;
+    margin-bottom: 20%;
+    margin-left: 13%;
     border-radius: 50%;
-    /* opacity: 1; */
   }
 
-  .intro-pic::before {
+  /* .intro-pic::before {
     opacity: 1;
-  }
+  } */
 
   .intro-grid {
-    left: 0; /* newly added [10%]*/
-    opacity: 1;
-
-    .intro-text {
-      -webkit-transform: none;
-      transform: none;
-      text-align: center;
-      margin-bottom: 2rem; /* newly added*/
-    }
-
-    .intro-text h1 {
-      font-size: 4.8rem;
-      margin-top: 2rem; /* newly added*/
-      padding-top: 2rem; /* newly added*/
-    }
-
-    .intro-scroll {
-      font-size: 1.1rem;
-      left: 30px;
-    }
+    /* position: fixed; */
+    left: 10%; /* newly added [10%]*/
+    opacity: 0.3;
+    width: 66vw;     /* set width responsive to viewport width */
+    max-width: 320px; /* maximum width limit */
+    height: 320px;     /* or set a fixed height like 200px */
+    margin-top:38%;
+    margin-left:-120%;
   }
+
+
+  .intro-text {
+    -webkit-transform: none;
+    transform: none;
+    text-align: center;
+    margin-bottom: 2rem; /* newly added*/
+  }
+
+  .intro-text h1 {
+    font-size: 4.8rem;
+    margin-top: 2rem; /* newly added*/
+    padding-top: 2rem; /* newly added*/
+  }
+
+  .intro-scroll {
+    font-size: 1.1rem;
+    left: 30px;
+  }
+}
 
   @media screen and (max-width: 540px) {
     .s-intro {
@@ -3200,29 +3211,12 @@ input::-moz-focus-inner {
 @media screen and (max-width: 600px) {
   .about-me__buttons .column:first-child,
   .about-experience__timeline .column:first-child {
-    padding-right: 0;
+    padding-right: 10px;
   }
 
   .about-me__buttons .column:last-child,
   .about-experience__timeline .column:last-child {
-    padding-left: 0;
-  }
-
-  .about-me__buttons .column a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .btn {
-    min-height: 48px;
-    height: 7rem;
-    line-height: 6.6rem;
-  }
-
-  .contact-social ul li a {
-    display: inline-block;
-    padding: 1rem 1.5rem;
+    padding-left: 10px;
   }
 
   .timeline::after {
@@ -3241,6 +3235,7 @@ input::-moz-focus-inner {
     font-size: 1.8rem;
   }
 }
+
 
 @media screen and (max-width: 400px) {
   .s-about > [class*="about-"] {
