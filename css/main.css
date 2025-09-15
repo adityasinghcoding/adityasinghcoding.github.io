@@ -2699,7 +2699,7 @@ input::-moz-focus-inner {
     flex-direction: column;
     align-items: center;
     text-align: center; /* newly added*/
-    padding-top: 150px;
+    padding-top: 110px;
   }
 
   .intro-pic {
@@ -2717,16 +2717,16 @@ input::-moz-focus-inner {
     opacity: 1;
   } */
 
-  .intro-grid {
+  /* .intro-grid { */
     /* position: fixed; */
-    left: 10%; /* newly added [10%]*/
-    opacity: 0.3;
-    width: 66vw;     /* set width responsive to viewport width */
-    max-width: 320px; /* maximum width limit */
-    height: 320px;     /* or set a fixed height like 200px */
-    margin-top:38%;
-    margin-left:-120%;
-  }
+    /* left: 10%; newly added [10%] */
+    /* opacity: 0.3; */
+    /* width: 66vw;     set width responsive to viewport width */
+    /* max-width: 320px; maximum width limit */
+    /* height: 320px;     or set a fixed height like 200px */
+    /* margin-top:45%; */
+    /* margin-left:-120%; */
+  /* } */
 
 
   .intro-text {
@@ -3211,12 +3211,29 @@ input::-moz-focus-inner {
 @media screen and (max-width: 600px) {
   .about-me__buttons .column:first-child,
   .about-experience__timeline .column:first-child {
-    padding-right: 10px;
+    padding-right: 0;
   }
 
   .about-me__buttons .column:last-child,
   .about-experience__timeline .column:last-child {
-    padding-left: 10px;
+    padding-left: 0;
+  }
+
+  .about-me__buttons .column a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn {
+    min-height: 48px;
+    height: 7rem;
+    line-height: 6.6rem;
+  }
+
+  .contact-social ul li a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
   }
 
   .timeline::after {
@@ -3235,7 +3252,6 @@ input::-moz-focus-inner {
     font-size: 1.8rem;
   }
 }
-
 
 @media screen and (max-width: 400px) {
   .s-about > [class*="about-"] {
