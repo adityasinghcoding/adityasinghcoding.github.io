@@ -2705,8 +2705,9 @@ input::-moz-focus-inner {
     width: 80vh; /* newly added [200px]*/
     max-width: 200px; /* newly added*/
     height: auto; /* newly added [200px]*/
-    margin-bottom: 2rem;
+    margin-bottom: 10%;
     border-radius: 50%;
+    opacity: 0.5;
   }
 
   /* .intro-pic::before {
@@ -2725,8 +2726,8 @@ input::-moz-focus-inner {
 
     .intro-text h1 {
       font-size: 4.8rem;
-      margin-top: auto; /* newly added*/
-      padding-top: 2rem;
+      margin-top: 2rem; /* newly added*/
+      padding-top: 2rem; /* newly added*/
     }
 
     .intro-scroll {
