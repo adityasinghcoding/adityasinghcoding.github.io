@@ -2803,8 +2803,8 @@ input::-moz-focus-inner {
     display: flex;
     flex-direction: column;
     align-items: center; /* centers horizontally */
-    text-align: center; /* centers text inside */
-    padding: 1rem; /* add some padding */
+    /* text-align: center; centers text inside            commented */
+    /* padding: 1rem; add some padding                    commented */
   }
   */ .intro-pic {
     position: absolute;
@@ -2835,7 +2835,7 @@ input::-moz-focus-inner {
     font-size: 1.1rem;
     left: 30px;
   }
-}
+
 
 @media screen and (max-width: 450px) {
   .s-intro {
