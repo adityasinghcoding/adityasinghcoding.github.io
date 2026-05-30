@@ -1,0 +1,585 @@
+/* =================================================================== 
+ * styles.css — Responsive polish + gradient enhancements
+ * Loaded after main.css — overrides only what needs fixing
+ * =================================================================== */
+
+/* -------------------------------------------------------------------
+ * GLOBAL — smooth scrolling & box-sizing safety
+ * ------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------------------------
+ * INTRO — gradient overlay + stat badges responsive
+ * ------------------------------------------------------------------- */
+
+/* Subtle radial gradient on the dark intro to add depth */
+.s-intro {
+  background: radial-gradient(ellipse at 70% 50%, #0e1a2b 0%, #050505 65%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Faint diagonal gradient accent strip */
+.s-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.015) 0%,
+    transparent 50%,
+    rgba(255,80,80,0.04) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Stat badges */
+.intro-stats {
+  display: flex;
+  gap: 3.2rem;
+  margin-top: 3.6rem;
+  flex-wrap: wrap;
+}
+
+.intro-stat {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid rgba(255,255,255,0.18);
+  padding-left: 1.6rem;
+}
+
+.intro-stat__num {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+  display: block;
+}
+
+.intro-stat__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+  margin-top: 0.6rem;
+  display: block;
+}
+
+/* --- Responsive: intro stats ------------------------------------ */
+@media screen and (max-width: 900px) {
+  .intro-stats {
+    gap: 2.4rem;
+    margin-top: 2.8rem;
+  }
+  .intro-stat__num { font-size: 2.8rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .intro-stats {
+    gap: 1.8rem;
+    margin-top: 2rem;
+  }
+  .intro-stat__num { font-size: 2.4rem; }
+  .intro-stat__label { font-size: 1rem; }
+}
+
+@media screen and (max-width: 400px) {
+  .intro-stats { gap: 1.4rem; }
+  .intro-stat { padding-left: 1.2rem; }
+  .intro-stat__num { font-size: 2rem; }
+}
+
+/* -------------------------------------------------------------------
+ * ABOUT — light gradient wash on white bg for depth
+ * ------------------------------------------------------------------- */
+.s-about {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+}
+
+/* -------------------------------------------------------------------
+ * SKILLS — gradient layered on top of the dark bg image
+ * ------------------------------------------------------------------- */
+.s-services {
+  position: relative;
+}
+
+/* Gradient that goes dark→slightly lighter→dark for visual interest */
+.s-services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(5,5,5,0.92) 0%,
+    rgba(10,18,32,0.78) 50%,
+    rgba(5,5,5,0.95) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.s-services .shadow-overlay,
+.s-services .row {
+  position: relative;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------
+ * PROJECTS — gradient accent on the white section
+ * ------------------------------------------------------------------- */
+.s-works {
+  background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
+}
+
+/* Project image — contained, padded, consistent */
+.item-folio__thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background-color: #f5f5f5;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: transform 0.35s ease;
+}
+
+.item-folio__thumb:hover img {
+  transform: scale(1.04);
+}
+
+/* Equal-height card fix */
+.masonry::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.masonry__brick {
+  display: flex;
+}
+
+.item-folio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item-folio__desc {
+  flex: 1;
+  padding: 1.8rem 2.4rem 0;
+  text-align: left;
+}
+
+.item-folio__desc p {
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.item-folio__links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.8rem;
+  padding: 1.4rem 2.4rem 2.4rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.item-folio__links a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.item-folio__links a:hover {
+  color: rgb(220, 0, 0);
+  border-color: rgb(220, 0, 0);
+}
+
+/* Mobile: revert flex so cards stack full-width */
+@media screen and (max-width: 800px) {
+  .masonry__brick { display: block; }
+  .item-folio__thumb img { height: 180px; padding: 16px; }
+  .item-folio__desc { padding: 1.4rem 1.8rem 0; }
+  .item-folio__links { padding: 1.2rem 1.8rem 2rem; }
+}
+
+/* -------------------------------------------------------------------
+ * CERTIFICATIONS — gradient + responsive
+ * ------------------------------------------------------------------- */
+.s-certs {
+  padding-top: 14rem;
+  padding-bottom: 12rem;
+  background: linear-gradient(180deg, #f2f2f2 0%, #ffffff 100%);
+}
+
+.certs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 7rem auto 0;
+  justify-content: center;
+  padding: 0 2.4rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-top: 3px solid #050505;
+  padding: 2rem 2.4rem;
+  flex: 1 1 28rem;
+  max-width: 36rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  /* subtle gradient shimmer on card */
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+.cert-card:hover {
+  box-shadow: 0 10px 32px rgba(0,0,0,0.09);
+  transform: translateY(-4px);
+}
+
+.cert-card__logo {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  color: #fff;
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.cert-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card__title {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.4rem;
+  line-height: 1.35;
+}
+
+.cert-card__issuer {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  letter-spacing: 0.03rem;
+}
+
+/* Responsive: certs */
+@media screen and (max-width: 900px) {
+  .s-certs { padding-top: 12rem; padding-bottom: 10rem; }
+  .certs-list { margin-top: 5rem; gap: 1.6rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .s-certs { padding-top: 9rem; padding-bottom: 8rem; }
+  .certs-list { padding: 0 1.6rem; gap: 1.2rem; }
+  .cert-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1.6rem 2rem;
+  }
+  .cert-card__logo { width: 4.2rem; height: 4.2rem; font-size: 1.1rem; }
+  .cert-card__title { font-size: 1.55rem; }
+}
+
+/* -------------------------------------------------------------------
+ * CONTACT — gradient on dark bg
+ * ------------------------------------------------------------------- */
+.s-contact {
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(160deg, #050505 0%, #0a1020 55%, #050505 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Faint radial glow in upper-right */
+.s-contact::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 50rem;
+  height: 50rem;
+  background: radial-gradient(circle, rgba(255,60,60,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.s-contact .row {
+  position: relative;
+  z-index: 1;
+}
+
+.s-contact .section-heading,
+.s-contact h2 {
+  color: #ffffff;
+}
+
+.s-contact .section-heading::before {
+  background: #ffffff;
+}
+
+/* Email link */
+.contact-email {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 2.4rem 0 5rem;
+  word-break: break-word;
+}
+
+.contact-email a {
+  color: rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  transition: color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.55);
+}
+
+/* Contact social */
+.s-contact .contact-infos {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.s-contact .contact-infos h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.s-contact .contact-infos a {
+  color: rgba(255,255,255,0.55);
+  font-size: 2rem;
+}
+
+.s-contact .contact-infos a:hover {
+  color: #ffffff;
+}
+
+.s-contact .contact-social ul li::before {
+  color: rgba(255,255,255,0.2);
+}
+
+/* Responsive: contact */
+@media screen and (max-width: 800px) {
+  .s-contact { padding-top: 10rem; padding-bottom: 6rem; }
+  .contact-email { margin: 2rem 0 4rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .s-contact { padding-top: 8rem; }
+  .s-contact .contact-infos { font-size: 2rem; }
+  .s-contact .contact-infos a { font-size: 1.8rem; }
+  .contact-email { font-size: clamp(1.4rem, 4vw, 2rem); }
+}
+
+/* -------------------------------------------------------------------
+ * FOOTER — gradient
+ * ------------------------------------------------------------------- */
+footer {
+  background: linear-gradient(180deg, #050505 0%, #000000 100%);
+}
+
+/* -------------------------------------------------------------------
+ * SECTION HEADINGS — subtle gradient underline accent
+ * ------------------------------------------------------------------- */
+.section-heading::before {
+  background: linear-gradient(90deg, #050505 0%, #555 100%) !important;
+  height: 3px;
+}
+
+/* Dark section heading underlines stay white */
+.ss-dark .section-heading::before,
+.s-contact .section-heading::before {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.3) 100%) !important;
+}
+
+/* -------------------------------------------------------------------
+ * ABOUT — section heading (dark text on white)
+ * ------------------------------------------------------------------- */
+.s-about .section-heading { color: #000000; }
+
+/* -------------------------------------------------------------------
+ * RESPONSIVE — global padding & font adjustments per breakpoint
+ * ------------------------------------------------------------------- */
+
+/* Large tablet */
+@media screen and (max-width: 1024px) {
+  .s-about { padding-top: 12rem; padding-bottom: 10rem; }
+  .s-works { padding-top: 12rem; padding-bottom: 10rem; }
+}
+
+/* Tablet */
+@media screen and (max-width: 800px) {
+  .s-about { padding-top: 10rem; padding-bottom: 8rem; }
+  .s-works { padding-top: 10rem; padding-bottom: 8rem; }
+  .s-services { padding-top: 10rem; padding-bottom: 10rem; }
+
+  /* Masonry goes full-width on tablet */
+  .masonry .grid-sizer,
+  .masonry__brick {
+    width: 100%;
+  }
+  .masonry__brick {
+    float: none;
+    margin-bottom: 4rem;
+  }
+}
+
+/* Phone landscape / small tablet */
+@media screen and (max-width: 600px) {
+  .s-about { padding-top: 8rem; padding-bottom: 6rem; }
+  .s-works { padding-top: 8rem; padding-bottom: 6rem; }
+  .s-services { padding-top: 8rem; padding-bottom: 8rem; }
+
+  /* Tighten masonry wrap */
+  .masonry-wrap {
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 5rem;
+  }
+
+  /* Intro headline size */
+  .intro-text h1 {
+    font-size: 5rem !important;
+    line-height: 1.15;
+  }
+
+  .intro-text h3 {
+    font-size: 2rem !important;
+  }
+
+  /* About lead text */
+  p.lead {
+    font-size: 1.8rem;
+    line-height: 1.75;
+    margin-bottom: 2.4rem;
+  }
+
+  /* Buttons full-width on mobile */
+  .about-me__buttons .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .btn { height: 5.6rem; line-height: 5.2rem; font-size: 1.3rem; }
+
+  /* Skills list tighter */
+  .services-list .item-service {
+    min-height: 0;
+    padding: 0 1.2rem;
+  }
+
+  .services-list {
+    margin-top: 5rem;
+  }
+}
+
+/* Small phone */
+@media screen and (max-width: 400px) {
+  .intro-text h1 {
+    font-size: 4rem !important;
+  }
+
+  .intro-text h3 {
+    font-size: 1.8rem !important;
+  }
+
+  p.lead {
+    font-size: 1.6rem;
+  }
+
+  .masonry-wrap {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .item-folio__desc { padding: 1.2rem 1.4rem 0; }
+  .item-folio__links { padding: 1rem 1.4rem 1.6rem; }
+
+  .cert-card { gap: 1.2rem; padding: 1.4rem 1.6rem; }
+}
+
+/* -------------------------------------------------------------------
+ * HEADER — gradient glow when sticky
+ * ------------------------------------------------------------------- */
+.s-header.sticky {
+  background: linear-gradient(180deg, rgba(5,5,5,0.97) 0%, rgba(8,8,8,0.95) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* -------------------------------------------------------------------
+ * BUTTONS — subtle gradient lift on primary button
+ * ------------------------------------------------------------------- */
+.btn.btn--primary,
+button.btn--primary {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  border-color: #000;
+}
+
+.btn.btn--primary:hover,
+button.btn--primary:hover {
+  background: linear-gradient(135deg, #333 0%, #111 100%);
+}
+
+/* -------------------------------------------------------------------
+ * SCROLL INDICATOR — fade on mobile since no space
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .intro-scroll {
+    display: none;
+  }
+}
