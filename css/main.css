@@ -4438,3 +4438,297 @@ html[data-useragent*="rv:11.0"] .ss-go-top::before,
 html[data-useragent*="rv:11.0"] .ss-go-top::after {
   display: none;
 }
+
+/* ===================================================================
+ * # PORTFOLIO ENHANCEMENTS
+ * All new rules — nothing overwritten above
+ * =================================================================== */
+
+/* -------------------------------------------------------------------
+ * ## Intro stat badges
+ * ------------------------------------------------------------------- */
+.intro-stats {
+  display: flex;
+  gap: 3.2rem;
+  margin-top: 3.6rem;
+  flex-wrap: wrap;
+}
+
+.intro-stat {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid rgba(255,255,255,0.18);
+  padding-left: 1.6rem;
+}
+
+.intro-stat__num {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.intro-stat__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .intro-stats {
+    gap: 2rem;
+    margin-top: 2.4rem;
+  }
+  .intro-stat__num {
+    font-size: 2.6rem;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * ## Project cards — equal height with image fix
+ * ------------------------------------------------------------------- */
+
+/* Clear masonry float properly */
+.masonry::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Both bricks same height */
+.masonry__brick {
+  display: flex;
+}
+
+.item-folio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Fixed image height so both thumbnails match regardless of source aspect ratio */
+.item-folio__thumb img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Description block below title — pushes links to bottom */
+.item-folio__desc {
+  flex: 1;
+  padding: 2rem 2.4rem 0;
+  text-align: left;
+}
+
+.item-folio__desc p {
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.item-folio__links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.8rem;
+  padding: 1.4rem 2.4rem 2.4rem;
+  border-top: 1px solid #ddd;
+}
+
+.item-folio__links a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.item-folio__links a:hover {
+  color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+
+/* mobile: revert flex so bricks stack normally */
+@media screen and (max-width: 800px) {
+  .masonry__brick {
+    display: block;
+  }
+  .item-folio__thumb img {
+    height: 200px;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * ## Certifications section
+ * ------------------------------------------------------------------- */
+.s-certs {
+  padding-top: 19.2rem;
+  padding-bottom: 16rem;
+  background-color: #ffffff;
+}
+
+.certs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  max-width: 1100px;
+  margin: 8rem auto 0;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-top: 3px solid #050505;
+  padding: 2rem 2.4rem;
+  min-width: 28rem;
+  flex: 1 1 28rem;
+  max-width: 36rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cert-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.cert-card__logo {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background: #050505;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.cert-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card__title {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.cert-card__issuer {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: #7e7e7e;
+  letter-spacing: 0.04rem;
+}
+
+@media screen and (max-width: 800px) {
+  .s-certs {
+    padding-top: 14rem;
+    padding-bottom: 12rem;
+  }
+  .certs-list {
+    margin-top: 6rem;
+    gap: 1.6rem;
+  }
+  .cert-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* -------------------------------------------------------------------
+ * ## Contact section — use proper s-contact class
+ * ------------------------------------------------------------------- */
+.s-contact {
+  padding-top: 18.4rem;
+  padding-bottom: 8rem;
+  background-color: #050505;
+}
+
+.s-contact .section-heading,
+.s-contact h2 {
+  color: #ffffff;
+}
+
+.s-contact .section-heading::before {
+  background: #ffffff;
+}
+
+.contact-email {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 3.2rem 0 6rem;
+  word-break: break-word;
+}
+
+.contact-email a {
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.6);
+}
+
+.s-contact .contact-infos {
+  margin-top: 4rem;
+  font-size: 3.6rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.s-contact .contact-infos h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.2rem;
+}
+
+.s-contact .contact-infos a {
+  color: rgba(255,255,255,0.6);
+}
+
+.s-contact .contact-infos a:hover {
+  color: #ffffff;
+}
+
+.s-contact .contact-social ul li::before {
+  color: rgba(255,255,255,0.25);
+}
+
